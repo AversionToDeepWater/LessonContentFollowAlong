@@ -12,6 +12,10 @@ app = Flask(__name__)
 def root():
     return jsonify("THIS IS ROOT")
 
+@app.route("/name", methods=["GET"])
+def meaningful_thing():
+    return jsonify("Iman")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
