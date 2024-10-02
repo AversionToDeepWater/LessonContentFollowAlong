@@ -34,14 +34,8 @@ users_wage = int(input("How much does the viewer earn a year?"))
 👇   Finish the application  👇
 """
 
-if users_wage < 12500 and users_age > 3:
-    print("You are eligible for a free ticket!")
-elif users_age >= 3 and users_age <= 12:
-    print("You get 50% off!")
-elif users_age >= 65:
-
-
-
-
-
-
+# if users_wage < 12500 and users_age > 3:
+#     print("You are eligible for a free ticket!")
+# elif users_age >= 3 and users_age <= 12:
+#     print("You get 50% off!")
+# elif users_age >= 65:
