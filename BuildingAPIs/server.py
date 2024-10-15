@@ -30,14 +30,12 @@ def get_characters():
 @app.route("/characters/<int:an_id>", methods=["GET"])
 def get_character_by_id(an_id):
     char = [char for char in characters if char["id"] == an_id]
-    return jsonify(char)
+    return jsonify( "Who is this?: ", char)
 
 @app.route("/characters/<int:an_id>", methods=["DELETE"]) #The only method you can view in your browser is GET
 def remove_character_by_id(an_id):
     #characters[:] splices the list, and removes anything that you do NOT want to delete 
-    #characters[:] = [char for char in characters if char["id"] != an_id]
-    char = [char for char in characters if char["id"] != an_id]
-    print("Who is this?: ", char)
+    characters[:] = [char for char in characters if char["id"] != an_id]
     return jsonify("WORKING ON IT...")
 
 app.run(port=8000)    # server won't load in chrome (idk if that's the right terminology)
