@@ -23,12 +23,12 @@ int_user = int(user_input)
 new_list = []
 
 #adding numbers to list
-def five_not_seven(input:int):
+def five_not_seven(i:int):
     for i in range(int_user): #have to use range for int, not len()! len is for strings
         if i % 5 == 0 and i % 7 != 0:
             new_list.append(i)
     return new_list
-
-print(five_not_seven(user_input))
+#hmm, my output does not include the given number
+print(five_not_seven(int_user))
 
 
