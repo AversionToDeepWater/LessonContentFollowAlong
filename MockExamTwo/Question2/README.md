@@ -28,7 +28,7 @@ sales_info = {
 Example Output:
 
 ```
-Total revenue: 23.6
+Total revenue: 26.5
 ```
 
 Instructions:
