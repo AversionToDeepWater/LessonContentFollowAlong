@@ -29,15 +29,56 @@ methods we can use are dependent on what class our object belongs to
 #When naming our class we use camel case
 class Dog: #blueprint for any object that is of type dog, and defining what operations it can perform
 
+#self argument is always needed, so we can pass the object itself so we know what data to access
+
+    def __init__(self, name, age): #instantiate object right when it is created, and assign attribute(s)
+        #attributes can be referenced later on or within the class
+        self.name = name #created an attribute of the class dog which is name.
+        self.age = age
+
+        #self is there to denote the object itself
+        #whenever we create a new dog object, we will pass a name through this parameter
+
+    #therefore whenever we create a new dog instance using Dog(), it will pass any arguments to this method
+    #e.g. whenever a Dog() object is made, we say that the dog needs to have a name
+
     def bark(self): #this is a method, it is a function that goes into a class
         print("bark")
 
-d = Dog() #our variable d is assigned to an instance of the class Dog
-# therefore d is an object of type dog
+    def add_one(self, x):
+        return x+1
 
-print(type(d))
-# returns <class '__main__.Dog'>
+    def get_name(self):
+        return self.name
 
-# Using method on instance of type dog
-d.bark()
+    def get_age(self):
+        return self.age
 
+    def set_age(self, age):
+        self.age = age
+
+
+
+#creating an object of the class dog, with a different name, so we can access attributes specific to each dog
+#this is stored permanently for each specific object
+d = Dog("Bagel", 5)
+#d2 = Dog("Baguette")
+
+print(d.get_age())
+
+# print(d.name) # not needed with get_name method
+# print(d2.name)
+
+# d = Dog() #our variable d is assigned to an instance of the class Dog
+# # therefore d is an object of type dog
+#
+# print(type(d))
+# # returns <class '__main__.Dog'>
+#
+# # Using method on instance of type dog
+# d.bark()
+#
+# # Using another method from out dog class, which has different arguments and parameters
+# print(d.add_one(5))
+#
+# # Using
