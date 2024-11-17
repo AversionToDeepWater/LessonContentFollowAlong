@@ -9,13 +9,19 @@ pygame.init() #starts pygame and initials all the parts needed fot it to run suc
 screen = pygame.display.set_mode((800,400)) #width, height
 pygame.display.set_caption('DOGTECTIVE') #the title of our game!
 
+#controlling frame rate - saying the min and max frame rate
+clock = pygame.time.Clock()
+
+
+#MAKING EVENT LOOP
 while True:
-    #MAKING EVENT LOOP
     # draw all our elements
-    # update everything and display surface
+
     for event in pygame.event.get(): #gets us all the events
         if event.type == pygame.QUIT: #i.e closing window
             pygame.quit() #this is the opposite of pygame.init()
-            exit() #this will stop the code running, more secure than break for while loop
+            exit() #this will stop the code running, more secure than break for while loop - import from sys
 
+    # update everything and display surface
     pygame.display.update() # only have to call it once, like pygame.init()
+    clock.tick(60) #saying game should not run faster than 60fps - need to make sure game is not too complex
