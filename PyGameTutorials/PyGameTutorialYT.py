@@ -45,8 +45,8 @@ while True:
     screen.blit(foreground_surface,(0,30))
     screen.blit(trees_surface,(0,40))
     screen.blit(floor_surface,(0,55))
-    screen.blit(text_surface,(200,50))
-    screen.blit(dog_surface,(100,50))
+    # screen.blit(text_surface,(200,50))
+    # screen.blit(dog_surface,(100,50))
     # update everything and display surface
     pygame.display.update() # only have to call it once, like pygame.init()
     clock.tick(60) #saying game should not run faster than 60fps - need to make sure game is not too complex
