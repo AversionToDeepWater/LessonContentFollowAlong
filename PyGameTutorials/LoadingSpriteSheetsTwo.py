@@ -10,5 +10,5 @@ class SpriteSheet():
         image.blit(self.sheet, (0, 0),((frame * width), 0, width, height))  # has taken the whole sprite sheet and only taken part of it
         # scale image and resize to make bigger
         image = pygame.transform.scale(image, (width * scale, height * scale))  # make sprite bigger or smaller
-        image.set_colorkey(colour)  # gets rid of black background from image and make transparent
+        image.set_colorkey(colour)  # transparent background instead of black background
         return image

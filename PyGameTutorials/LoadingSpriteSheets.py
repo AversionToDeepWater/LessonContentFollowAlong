@@ -3,8 +3,8 @@ import LoadingSpriteSheetsTwo
 
 pygame.init()
 
-screen_width = 500
-screen_height = 500
+screen_width = 1200
+screen_height = 780
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Spritesheets')
@@ -52,12 +52,12 @@ while run:
     # screen.blit(sprite_sheet_image,(0,0))
 
     #update animation
-    # if 500ms have passed between last update and current one, update animation
+    # if 75ms have passed between last update and current one, update animation
     current_time = pygame.time.get_ticks()
     if current_time - last_update >= animation_cooldown:
         frame += 1
         last_update = current_time
-        if frame >= len(animation_list):
+        if frame >= len(animation_list): #loops back to first image in sprite sheet
             frame = 0
 
     #show frame image
