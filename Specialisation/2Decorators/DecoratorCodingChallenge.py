@@ -43,7 +43,9 @@ def time_func(func):
         #!r applies repr(), ensuring the string representation of an object is given
         #repr() helps give more detailed info than str(), and is useful for debugging
         #repr() returns an unambiguous string representation of the object
-        print(f"Time to run {func.__name__!r} is: {time_taken} seconds")
+
+        #{time_taken:.8f} gives us the value to 8 d.p (just cuts it off doesn't round)
+        print(f"Time to run {func.__name__!r} is: {time_taken:.8f} seconds")
     return inner_wrapper #need to return inner wrapper in the scope of the outer_wrapper
 
 # Test your timer against this long running function:
