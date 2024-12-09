@@ -34,7 +34,8 @@ def unhash_alg(encoded:list):
             decoded.append(chr(x))
         else:
             decoded.append(chr(x-1))
-    return decoded
+
+    return ''.join(decoded)
 
 
 print(hash_algorithm('Hello World'))
