@@ -18,6 +18,7 @@ one to decode your encoded messages!
 def hash_algorithm(message:str):
     encoded_list = [] #list of integers in list
     for i, char in enumerate(message): #enumerate gives tuple of (index, char)
+    #more about enumerate https://www.geeksforgeeks.org/enumerate-in-python/
         if i % 2 == 0:
             encoded_list.append(ord(char)) #adds integers to list
         else:
