@@ -12,5 +12,8 @@ def value_output (d:dict):
     for key in d: #iterates through dictionary
         total += d[key] #adds the value from each key value pair to starting value of zero
     return total
-
+    #Another solution
+    # for i in d.values():
+    #     total += i
+    # return total
 print(value_output(example))
